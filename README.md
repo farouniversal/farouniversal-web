@@ -28,7 +28,7 @@ cuenta de un tercero además de GitHub (que el equipo ya usa). El archivo
 
 Para que quede sirviendo el dominio de verdad, faltan **dos pasos que no
 pude hacer yo** (ver el detalle completo en
-`~/Faro/.hilos/necesito-a-fernan/T781-repo-listo-faltan-dos-pasos-de-fernan.md`
+`~/Faro/.hilos/necesito-a-fernan/T781-repo-listo-faltan-tres-pasos-de-fernan.md`
 del lado de quien lea esto desde el hilo de trabajo):
 
 1. **Hacer público este repo** (o mudar el contenido a uno público): GitHub
