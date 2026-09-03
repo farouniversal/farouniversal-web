@@ -26,29 +26,22 @@ Elegí **GitHub Pages** como default, por ser gratis y no depender de una
 cuenta de un tercero además de GitHub (que el equipo ya usa). El archivo
 `CNAME` ya está en el repo con `farouniversal.com.ar`.
 
-Para que quede sirviendo el dominio de verdad, faltan **dos pasos que no
-pude hacer yo** (ver el detalle completo en
-`~/Faro/.hilos/necesito-a-fernan/T781-repo-listo-faltan-tres-pasos-de-fernan.md`
-del lado de quien lea esto desde el hilo de trabajo):
+Los tres pasos que hacían falta (repo público, DNS, mail de contacto) los
+hizo Fernán el 2026-08-28 — ver
+`~/Faro/.hilos/necesito-a-fernan/.resueltos/T781-repo-listo-faltan-tres-pasos-de-fernan.md`.
+**Pero volvió a caerse**: verificado el 2026-09-03, GitHub Pages está
+apagado en el repo (`has_pages: false`, `farouniversal.com.ar` da 404 con
+"Site not found · GitHub Pages") aunque el repo sigue público y el DNS
+sigue apuntando bien a Cloudflare/GitHub. No es un problema de este
+contenido ni del DNS — es sólo el toggle de Pages, que se puede haber
+apagado solo (pasa cuando GitHub no puede reverificar el dominio custom por
+un tiempo). Reactivarlo es cosa de Fernán —el clasificador de esta sesión
+bloqueó que lo hiciera por API—: ver
+`~/Faro/.hilos/necesito-a-fernan/T781-el-sitio-se-cayo-github-pages-esta-apagado.md`.
 
-1. **Hacer público este repo** (o mudar el contenido a uno público): GitHub
-   Pages con dominio propio no está disponible en repos privados con el plan
-   free de la organización.
-2. **Apuntar el DNS de `farouniversal.com.ar`** a GitHub Pages, en el
-   registrador del dominio:
-   - 4 registros `A` en la raíz, a `185.199.108.153`, `185.199.109.153`,
-     `185.199.110.153` y `185.199.111.153` (las IPs públicas de GitHub
-     Pages), **o** un registro `ALIAS`/`ANAME` a `farouniversal.github.io` si
-     el registrador lo soporta (una `A` a la raíz de un dominio no puede ser
-     un `CNAME` — esa es la limitación que resuelve `ALIAS`/`ANAME` cuando
-     existe).
-   - Después, en la configuración de Pages del repo (Settings → Pages),
-     confirmar el dominio custom una vez que el DNS ya propagó.
-
-Con esos dos pasos, `farouniversal.com.ar` empieza a servir esta página.
-Hasta entonces, el contenido se puede ver en
-`https://farouniversal.github.io/farouniversal-web/` una vez que Pages esté
-habilitado sobre el repo público.
+Mientras tanto, este README sigue siendo la referencia de cómo se sirve:
+Settings → Pages → Source: rama `main`, carpeta `/`, confirmar el dominio
+custom `farouniversal.com.ar` una vez reactivado.
 
 ## El mail de contacto
 
