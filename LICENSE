@@ -1,0 +1,21 @@
+Copyright © Faro Universal S.A. Todos los derechos reservados.
+
+Prohibida la reproducción, distribución, modificación e ingeniería inversa sin
+autorización escrita.
+
+--------------------------------------------------------------------------------
+
+Este repo es el sitio público de Faro Universal. **Es un repositorio público**,
+y este aviso existe justamente por eso: que el código sea visible no lo hace de
+uso libre.
+
+La única GPL del proyecto que corresponde es la de `com.farouniversal.integrator`,
+que deriva del Home Assistant Community original (decisión D4). Este repo no
+tiene relación de derivación con esa ni con ninguna otra obra ajena.
+
+El titular es Faro Universal S.A. por decisión de Fernán del 2026-09-08. La
+sociedad todavía no está registrada; si al constituirse cambia de nombre, este
+aviso se actualiza en todo el árbol. Fernán es el único autor del código.
+
+El texto de arriba sigue el criterio que redacta `farouniversal-tecnico/docs/15`
+§2.
