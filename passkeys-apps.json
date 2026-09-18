@@ -1,0 +1,37 @@
+{
+  "_comentario": [
+    "T1691 — fuente de datos para generar /.well-known/apple-app-site-association",
+    "y /.well-known/assetlinks.json con scripts/generar-well-known.sh.",
+    "La lista de apps vive ACA, como dato de este repo — el generador nunca lee",
+    "capacitor.config.* de otro repo en vivo (evita acoplar este build a otro repo).",
+    "Agregar una app nueva es sumar un objeto a 'apps': appId (Android/iOS,",
+    "coinciden en las apps de Faro), ios.teamId y android.sha256CertFingerprints.",
+    "Un campo en null o una lista vacía es un dato PENDIENTE, no un valor de",
+    "relleno — el generador se niega a escribir los archivos reales mientras",
+    "falte alguno. 'COMPLETAR' o cualquier string no vacío que no sea un dato",
+    "real está prohibido: mejor null que un placeholder de texto."
+  ],
+  "rpId": "farouniversal.com.ar",
+  "apps": [
+    {
+      "app": "faro-app-connect",
+      "appId": "ar.com.farouniversal.connect",
+      "medidoContra": "faro-app-connect origin/main @ cc32633 (capacitor.config.ts:24, ios/App/App.xcodeproj/project.pbxproj:312,333)",
+      "ios": {
+        "bundleId": "ar.com.farouniversal.connect",
+        "teamId": null
+      },
+      "android": {
+        "packageName": "ar.com.farouniversal.connect",
+        "sha256CertFingerprints": []
+      }
+    }
+  ],
+  "pendientes": [
+    {
+      "app": "faro-app-society",
+      "appId": "ar.com.farouniversal.socios",
+      "motivo": "NO se agrega todavía: sólo entra si Fernán decide que Society corre su propia ceremonia nativa de passkeys (docs/83 §9 pone hoy la sección de cuenta en Faro Connect). Es una decisión 🔒 sin cerrar: D-donde-viven-la-passkey-y-cuenta-y-seguridad, en farouniversal-tecnico/docs/14-decisiones-abiertas.md (la llevó ahí T1683, ya HECHA 2026-09-18). Cuando cierre, agregar acá es sumar un objeto a 'apps' con los mismos cuatro campos."
+    }
+  ]
+}
