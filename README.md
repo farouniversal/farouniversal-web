@@ -55,3 +55,21 @@ falta para que ese link funcione de verdad.
 Es un solo archivo (`index.html`) y una sola hoja de estilos
 (`estilos.css`). Sin build: editar y commitear alcanza, GitHub Pages sirve
 el `main` tal cual.
+
+## Chequeo: nunca se enlaza la web de Faro Connect
+
+`T1674` — esta landing (y el material de redes, si está en el mismo
+checkout) no puede linkear nunca la web de Faro Connect (todavía sin
+desplegar, `T1591`/`T1636`): es la medida 4 de las "5 medidas de
+no-indexado" que `BACKLOG.md` fija para toda web privada de una app de
+Faro. Se verifica con:
+
+```sh
+pruebas/verificar-no-enlaza-connect.sh
+```
+
+Falla (rojo, exit 1) si aparece un link real a esa web en cualquier
+archivo trackeado de este repo, o en el material de redes de
+`farouniversal-sa/marketing`/`faro-media` si el checkout los tiene al
+lado. Corrió en verde contra este repo y se probó el mutante (agregar y
+sacar un `<a href>` real) antes de commitear.
