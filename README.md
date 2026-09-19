@@ -157,10 +157,29 @@ archivo trackeado de este repo, o en el material de redes de
 lado. Corrió en verde contra este repo y se probó el mutante (agregar y
 sacar un `<a href>` real) antes de commitear.
 
+## Chequeo: nunca se enlaza la web de Faro Partner
+
+`T1716` — mismo mecanismo que `T1674` arriba, calcado para el host de la
+web de Faro Partner (`partner.farouniversal.com.ar`, todavía sin publicar
+— `T1637`, sin cerrar si se publica o no): es la misma medida 4 de las "5
+medidas de no-indexado" que `BACKLOG.md` fija para toda web privada de una
+app de Faro. Se verifica con:
+
+```sh
+pruebas/verificar-no-enlaza-partner.sh
+```
+
+Falla (rojo, exit 1) si aparece un link real a esa web en cualquier
+archivo trackeado de este repo, o en el material de redes de
+`farouniversal-sa/marketing`/`faro-media` si el checkout los tiene al
+lado. Corrió en verde contra este repo y se probó el mutante (agregar y
+sacar un `<a href>` real) antes de commitear.
+
 ## Banco de pruebas de este repo
 
 ```sh
 pruebas/verificar-no-enlaza-connect.sh   # T1674 — ver arriba
+pruebas/verificar-no-enlaza-partner.sh   # T1716 — ver arriba
 pruebas/verificar-well-known.sh          # T1691 — ver arriba
 pruebas/verificar-well-known.sh --en-vivo  # además mide contra producción
 ```
